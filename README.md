@@ -154,8 +154,9 @@ src/open_search_mcp/
   searcher.py   # SearXNG client + BM25 scoring
   extractor.py  # URL fetching + trafilatura + Playwright fallback
   chunker.py    # Embeddings-based chunk selection (fastembed)
-docker-compose.yml  # SearXNG + Redis
-searxng/settings.yml  # SearXNG config
+  cache.py      # TTL-based URL cache
+docker-compose.yml          # SearXNG + Redis
+searxng/settings.yml.template  # SearXNG config (generated at runtime)
 ```
 
 ## License
