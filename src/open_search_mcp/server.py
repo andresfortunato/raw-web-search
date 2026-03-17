@@ -82,6 +82,49 @@ async def app_lifespan(server: FastMCP):
         yield {"http_client": client, "url_cache": url_cache}
 
 
+async def _search_with_recovery(
+    client: httpx.AsyncClient,
+    query: str,
+    searxng_url: str,
+    max_results: int,
+    include_domains: list[str] | None = None,
+    exclude_domains: list[str] | None = None,
+    time_range: str | None = None,
+) -> list[dict]:
+    """Search SearXNG with automatic restart on connection failure.
+
+    If the search fails with a connection error, attempts to restart
+    SearXNG via docker compose and retries once.
+    """
+    try:
+        return await search_searxng(
+            client=client,
+            query=query,
+            searxng_url=searxng_url,
+            max_results=max_results,
+            include_domains=include_domains,
+            exclude_domains=exclude_domains,
+            time_range=time_range,
+        )
+    except RuntimeError as e:
+        if "not reachable" not in str(e):
+            raise
+
+        logger.warning("SearXNG connection lost, attempting restart...")
+        await _ensure_searxng_running()
+
+        # Retry once after restart
+        return await search_searxng(
+            client=client,
+            query=query,
+            searxng_url=searxng_url,
+            max_results=max_results,
+            include_domains=include_domains,
+            exclude_domains=exclude_domains,
+            time_range=time_range,
+        )
+
+
 mcp = FastMCP("search", lifespan=app_lifespan)
 
 
@@ -112,8 +155,9 @@ async def search(
     url_cache: URLCache = lifespan_ctx["url_cache"]
 
     # Step 1: Search SearXNG (overfetch to handle extraction failures)
+    # Uses recovery wrapper to auto-restart SearXNG on connection failure
     try:
-        search_results = await search_searxng(
+        search_results = await _search_with_recovery(
             client=client,
             query=query,
             searxng_url=SEARXNG_URL,
