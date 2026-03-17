@@ -1,0 +1,263 @@
+{
+  "all-MiniLM-L6-v2": {
+    "per_query": [
+      {
+        "query": "how to implement rate limiting in FastAPI",
+        "total_chars": 2711,
+        "avg_chars": 542,
+        "time_ms": 2979.7,
+        "full_chars": 44850,
+        "sample": "``` # user_rate_limiting.py from fastapi import FastAPI, Request, Depends, HTTPException from typing import Optional app = FastAPI() # Different limits for different user tiers RATE_LIMITS = { \"free\":"
+      },
+      {
+        "query": "rust vs go performance benchmarks 2025",
+        "total_chars": 1598,
+        "avg_chars": 320,
+        "time_ms": 2735.4,
+        "full_chars": 41653,
+        "sample": "**Trade-offs:** While Rust provides superior control and performance efficiency in system-level programming, its steep learning curve and strict compilation requirements can slow down development spee"
+      },
+      {
+        "query": "kubernetes pod security best practices",
+        "total_chars": 1645,
+        "avg_chars": 329,
+        "time_ms": 10344.0,
+        "full_chars": 88183,
+        "sample": "A detailed look at the different policy levels defined in the Pod Security Standards.\n\nThe Pod Security Standards define three different *policies* to broadly cover the security\nspectrum. These polici"
+      },
+      {
+        "query": "what causes lithium battery thermal runaway",
+        "total_chars": 1580,
+        "avg_chars": 316,
+        "time_ms": 2197.7,
+        "full_chars": 31138,
+        "sample": "# What is thermal runaway in lithium-ion batteries\n\nBatteries are designed to store chemical energy, and during thermal runaway, this chemical energy is uncontrollably released. In lithium-ion batteri"
+      },
+      {
+        "query": "GDPR data processing agreement requirements",
+        "total_chars": 2323,
+        "avg_chars": 465,
+        "time_ms": 2516.4,
+        "full_chars": 34258,
+        "sample": "If you\u2019re a business owner subject to the GDPR, it is in your interest to have a data processing agreement in place: first of all, it is required for GDPR compliance, but the DPA also gives you assura"
+      },
+      {
+        "query": "how does mRNA vaccine technology work",
+        "total_chars": 2424,
+        "avg_chars": 485,
+        "time_ms": 2377.0,
+        "full_chars": 29147,
+        "sample": "mRNA vaccines work by introducing a piece of mRNA that corresponds to a viral protein, usually a small piece of a protein found on the virus\u2019s outer membrane. (Individuals who get an mRNA vaccine are "
+      },
+      {
+        "query": "best practices for PostgreSQL index optimization",
+        "total_chars": 2253,
+        "avg_chars": 451,
+        "time_ms": 7063.8,
+        "full_chars": 70228,
+        "sample": "We all know that indexing is important, but it can be difficult to know where to start. In this post, my aim is to collate some of the best advice I\u2019ve seen for indexing Postgres, and simplify it for "
+      },
+      {
+        "query": "climate change impact on coral reef ecosystems",
+        "total_chars": 2156,
+        "avg_chars": 431,
+        "time_ms": 1951.3,
+        "full_chars": 30153,
+        "sample": "Climate change will affect coral reef ecosystems, through sea level rise, changes to the frequency and intensity of tropical storms, and altered ocean circulation patterns. When combined, all of these"
+      },
+      {
+        "query": "how to set up a SearXNG instance",
+        "total_chars": 1985,
+        "avg_chars": 397,
+        "time_ms": 3059.1,
+        "full_chars": 24076,
+        "sample": "# Step by step installation[\u00b6](https://docs.searxng.org#step-by-step-installation)\n\nIn this section we show the setup of a SearXNG instance that will be installed\nby the [Installation Script](https://"
+      },
+      {
+        "query": "transformer architecture attention mechanism explained",
+        "total_chars": 1675,
+        "avg_chars": 335,
+        "time_ms": 9255.9,
+        "full_chars": 88430,
+        "sample": "# Transformer Architecture Explained With Self-Attention Mechanism\n\nThe first transformer architecture was introduced in the paper \u201c[Attention Is All You Need](https://en.wikipedia.org/wiki/Attention_"
+      }
+    ],
+    "total_chars": 20350,
+    "total_time_ms": 44480.3,
+    "total_full_chars": 482116
+  },
+  "BGE-small-en-v1.5": {
+    "per_query": [
+      {
+        "query": "how to implement rate limiting in FastAPI",
+        "total_chars": 1698,
+        "avg_chars": 340,
+        "time_ms": 10905.7,
+        "full_chars": 44850,
+        "sample": "## FastAPI Integration\n\n### Complete Rate Limiting Middleware"
+      },
+      {
+        "query": "rust vs go performance benchmarks 2025",
+        "total_chars": 1542,
+        "avg_chars": 308,
+        "time_ms": 11294.5,
+        "full_chars": 41653,
+        "sample": "[News](https://blog.jetbrains.com/rust/category/news/)\n\n# Rust vs Go: Which One to Choose in 2025\n\n### Speed and efficiency of Rust in systems programming:\n\n**Trade-offs:** Although Go provides substa"
+      },
+      {
+        "query": "kubernetes pod security best practices",
+        "total_chars": 2232,
+        "avg_chars": 446,
+        "time_ms": 29748.3,
+        "full_chars": 88183,
+        "sample": "**Pod Security Admission Controller**\n\n### Alternatives\n\n[More information.](#third-party-content-disclaimer)Other alternatives for enforcing policies are being developed in the Kubernetes ecosystem, "
+      },
+      {
+        "query": "what causes lithium battery thermal runaway",
+        "total_chars": 1540,
+        "avg_chars": 308,
+        "time_ms": 6422.5,
+        "full_chars": 31138,
+        "sample": "# What is thermal runaway in lithium-ion batteries\n\nBatteries are designed to store chemical energy, and during thermal runaway, this chemical energy is uncontrollably released. In lithium-ion batteri"
+      },
+      {
+        "query": "GDPR data processing agreement requirements",
+        "total_chars": 1720,
+        "avg_chars": 344,
+        "time_ms": 7764.5,
+        "full_chars": 34258,
+        "sample": "A data processing agreement is a legally binding contract that states the rights and obligations of each party concerning the protection of personal data (see \u201c[What is personal data?](https://gdpr.eu"
+      },
+      {
+        "query": "how does mRNA vaccine technology work",
+        "total_chars": 2108,
+        "avg_chars": 422,
+        "time_ms": 8428.5,
+        "full_chars": 29147,
+        "sample": "mRNA vaccines work by introducing a piece of mRNA that corresponds to a viral protein, usually a small piece of a protein found on the virus\u2019s outer membrane. (Individuals who get an mRNA vaccine are "
+      },
+      {
+        "query": "best practices for PostgreSQL index optimization",
+        "total_chars": 1102,
+        "avg_chars": 220,
+        "time_ms": 25448.9,
+        "full_chars": 70228,
+        "sample": "In a previous post, we covered [a very basic introduction to indexing](https://www.pgmustard.com/blog/2019/04/02/postgres-indexes-for-absolute-beginners), so I won\u2019t go over that again here. However, "
+      },
+      {
+        "query": "climate change impact on coral reef ecosystems",
+        "total_chars": 2400,
+        "avg_chars": 480,
+        "time_ms": 7531.9,
+        "full_chars": 30153,
+        "sample": "Climate change will affect coral reef ecosystems, through sea level rise, changes to the frequency and intensity of tropical storms, and altered ocean circulation patterns. When combined, all of these"
+      },
+      {
+        "query": "how to set up a SearXNG instance",
+        "total_chars": 1511,
+        "avg_chars": 302,
+        "time_ms": 14385.4,
+        "full_chars": 24076,
+        "sample": "# Step by step installation[\u00b6](https://docs.searxng.org#step-by-step-installation)\n\n```\n# enable debug ..\n$ sudo -H sed -i -e \"s/debug : False/debug : True/g\" \"/etc/searxng/settings.yml\"\n# start webap"
+      },
+      {
+        "query": "transformer architecture attention mechanism explained",
+        "total_chars": 2381,
+        "avg_chars": 476,
+        "time_ms": 41277.6,
+        "full_chars": 88430,
+        "sample": "# Transformer Architecture Explained With Self-Attention Mechanism\n\n## Understanding different components in the transformer architecture"
+      }
+    ],
+    "total_chars": 18234,
+    "total_time_ms": 163207.8,
+    "total_full_chars": 482116
+  },
+  "nomic-embed-v1.5": {
+    "per_query": [
+      {
+        "query": "how to implement rate limiting in FastAPI",
+        "total_chars": 1734,
+        "avg_chars": 347,
+        "time_ms": 80281.9,
+        "full_chars": 44850,
+        "sample": "## FastAPI Integration\n\n### Complete Rate Limiting Middleware"
+      },
+      {
+        "query": "rust vs go performance benchmarks 2025",
+        "total_chars": 1760,
+        "avg_chars": 352,
+        "time_ms": 51015.7,
+        "full_chars": 41653,
+        "sample": "[News](https://blog.jetbrains.com/rust/category/news/)\n\n# Rust vs Go: Which One to Choose in 2025\n\nThe choice between Rust and Go is pivotal and should be made with a thorough understanding of each la"
+      },
+      {
+        "query": "kubernetes pod security best practices",
+        "total_chars": 2242,
+        "avg_chars": 448,
+        "time_ms": 128973.1,
+        "full_chars": 88183,
+        "sample": "The Pod Security Standards define three different *policies* to broadly cover the security\nspectrum. These policies are *cumulative* and range from highly-permissive to highly-restrictive.This guide o"
+      },
+      {
+        "query": "what causes lithium battery thermal runaway",
+        "total_chars": 1453,
+        "avg_chars": 291,
+        "time_ms": 23880.7,
+        "full_chars": 31138,
+        "sample": "# What is thermal runaway in lithium-ion batteries\n\nBatteries are designed to store chemical energy, and during thermal runaway, this chemical energy is uncontrollably released. In lithium-ion batteri"
+      },
+      {
+        "query": "GDPR data processing agreement requirements",
+        "total_chars": 1629,
+        "avg_chars": 326,
+        "time_ms": 34946.6,
+        "full_chars": 34258,
+        "sample": "If you\u2019re a business owner subject to the GDPR, it is in your interest to have a data processing agreement in place: first of all, it is required for GDPR compliance, but the DPA also gives you assura"
+      },
+      {
+        "query": "how does mRNA vaccine technology work",
+        "total_chars": 2130,
+        "avg_chars": 426,
+        "time_ms": 29718.0,
+        "full_chars": 29147,
+        "sample": "mRNA vaccines work by introducing a piece of mRNA that corresponds to a viral protein, usually a small piece of a protein found on the virus\u2019s outer membrane. (Individuals who get an mRNA vaccine are "
+      },
+      {
+        "query": "best practices for PostgreSQL index optimization",
+        "total_chars": 1263,
+        "avg_chars": 253,
+        "time_ms": 107486.7,
+        "full_chars": 70228,
+        "sample": "We all know that indexing is important, but it can be difficult to know where to start. In this post, my aim is to collate some of the best advice I\u2019ve seen for indexing Postgres, and simplify it for "
+      },
+      {
+        "query": "climate change impact on coral reef ecosystems",
+        "total_chars": 2230,
+        "avg_chars": 446,
+        "time_ms": 26063.7,
+        "full_chars": 30153,
+        "sample": "Climate change will affect coral reef ecosystems, through sea level rise, changes to the frequency and intensity of tropical storms, and altered ocean circulation patterns. When combined, all of these"
+      },
+      {
+        "query": "how to set up a SearXNG instance",
+        "total_chars": 1861,
+        "avg_chars": 372,
+        "time_ms": 56809.0,
+        "full_chars": 24076,
+        "sample": "In this section we show the setup of a SearXNG instance that will be installed\nby the [Installation Script](https://docs.searxng.org/installation-scripts.html#installation-scripts).\n\n[Install SearXNG "
+      },
+      {
+        "query": "transformer architecture attention mechanism explained",
+        "total_chars": 1976,
+        "avg_chars": 395,
+        "time_ms": 158208.9,
+        "full_chars": 88430,
+        "sample": "# Transformer Architecture Explained With Self-Attention Mechanism\n\nSelf-attention is a mechanism a transformer model uses to understand the meaning of a token based on the other tokens in the input. "
+      }
+    ],
+    "total_chars": 18278,
+    "total_time_ms": 697384.2999999999,
+    "total_full_chars": 482116
+  }
+}

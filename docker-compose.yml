@@ -1,0 +1,21 @@
+services:
+  redis:
+    image: valkey/valkey:8-alpine
+    restart: "no"
+    volumes:
+      - redis-data:/data
+
+  searxng:
+    image: searxng/searxng:latest
+    restart: "no"
+    ports:
+      - "8888:8080"
+    volumes:
+      - ./searxng/settings.yml:/etc/searxng/settings.yml:ro
+    environment:
+      - SEARXNG_BASE_URL=http://localhost:8888/
+    depends_on:
+      - redis
+
+volumes:
+  redis-data:

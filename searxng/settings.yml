@@ -1,0 +1,13 @@
+use_default_settings: true
+
+server:
+  secret_key: "7bcc6728078cc6305af71bfbbe4dac1e7758c873c991ec312e029e6ea2e2c870"
+  limiter: false
+  image_proxy: false
+
+search:
+  formats:
+    - json
+
+redis:
+  url: redis://redis:6379/0
