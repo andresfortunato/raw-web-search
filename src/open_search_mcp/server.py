@@ -98,7 +98,7 @@ async def app_lifespan(server: FastMCP):
     await pw_browser.start()
 
     async with httpx.AsyncClient(
-        follow_redirects=True,
+        follow_redirects=False,
         timeout=httpx.Timeout(FETCH_TIMEOUT),
         headers={"User-Agent": "search-mcp/0.1 (content extraction for LLMs)"},
         limits=httpx.Limits(max_connections=20, max_keepalive_connections=10),

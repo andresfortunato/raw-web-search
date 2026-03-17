@@ -232,6 +232,21 @@ async def fetch_and_extract(
             try:
                 headers = {"User-Agent": random.choice(_USER_AGENTS)}
                 resp = await client.get(url, headers=headers)
+
+                # Follow redirects manually with SSRF validation (max 5 hops)
+                for _ in range(5):
+                    if resp.status_code not in (301, 302, 303, 307, 308):
+                        break
+                    redirect_url = resp.headers.get("location", "")
+                    if not redirect_url:
+                        break
+                    # Resolve relative redirects
+                    if redirect_url.startswith("/"):
+                        parsed = urlparse(url)
+                        redirect_url = f"{parsed.scheme}://{parsed.netloc}{redirect_url}"
+                    _validate_url(redirect_url)
+                    resp = await client.get(redirect_url, headers=headers)
+
                 resp.raise_for_status()
                 # Limit response size to prevent memory exhaustion
                 content_length = resp.headers.get("content-length")

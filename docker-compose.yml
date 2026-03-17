@@ -1,12 +1,12 @@
 services:
   redis:
-    image: valkey/valkey:8-alpine
+    image: valkey/valkey:8-alpine@sha256:cb3339abbd6e18942cd8ac3349f0c371a82ba5b6204b242563ba299e7956cbd0
     restart: "no"
     volumes:
       - redis-data:/data
 
   searxng:
-    image: searxng/searxng:latest
+    image: searxng/searxng@sha256:174f6a8498d88d2d98c265a952c2d552859bf315cd505746d1c0d4fbec37952f
     restart: "no"
     ports:
       - "127.0.0.1:8888:8080"
