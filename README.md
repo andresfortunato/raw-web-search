@@ -49,43 +49,19 @@ open-search-mcp uses [SearXNG](https://docs.searxng.org/) as its search backend.
 ## Install
 
 ```bash
-claude mcp add open-search -- uvx --from git+https://github.com/andresfortunato/open-search.git open-search-mcp
-```
+# Install globally (available in all projects)
+claude mcp add -s user open-search -- uvx --from git+https://github.com/andresfortunato/open-search.git open-search-mcp
 
-That's it. Claude Code will run `uvx` to fetch and start the server on demand.
+# Set as default search (one-time — tells Claude to prefer open-search over WebSearch)
+uvx --from git+https://github.com/andresfortunato/open-search.git open-search-mcp --setup
 
-**Recommended: install Chromium for ~100% extraction success** (vs 76% without):
-
-```bash
+# Optional: install Chromium for ~100% extraction success (vs 76% without)
 playwright install chromium
 ```
 
-Without Chromium, the server works fine — it just can't extract from JS-rendered pages (Reddit, Medium, etc.). The server detects whether Chromium is available at startup and falls back gracefully.
+The `-s user` flag installs the MCP server globally so it's available in all projects. The `--setup` command writes a rule to `~/.claude/rules/` so Claude prefers open-search over built-in WebSearch/WebFetch everywhere. Both are one-time — they persist across sessions.
 
-### Manual config
-
-Add to `~/.claude.json`:
-
-```json
-{
-  "mcpServers": {
-    "open-search": {
-      "command": "uvx",
-      "args": ["--from", "git+https://github.com/andresfortunato/open-search.git", "open-search-mcp"]
-    }
-  }
-}
-```
-
-### Make it the default search (one-time setup)
-
-After installing, run setup to tell Claude Code to prefer open-search over WebSearch/WebFetch in all projects:
-
-```bash
-uvx --from git+https://github.com/andresfortunato/open-search.git open-search-mcp --setup
-```
-
-This installs a rule to `~/.claude/rules/open-search-preference.md`. Run it once — it persists across sessions and projects.
+Without Chromium, the server works fine — it just can't extract from JS-rendered pages (Reddit, Medium, etc.).
 
 ## Tools
 
