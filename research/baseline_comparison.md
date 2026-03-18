@@ -1,4 +1,4 @@
-# Baseline Eval: open-search-mcp vs Claude Code WebSearch+WebFetch
+# Baseline Eval: raw-web-search vs Claude Code WebSearch+WebFetch
 
 **Date:** 2026-03-17
 **Methodology:** 5 identical queries run through all tools. Our tool measured via script with timing. WebSearch/WebFetch called as Claude Code tools. Token counts estimated as chars/4.
@@ -12,7 +12,7 @@
 
 ---
 
-## Results: Our Tool (open-search-mcp)
+## Results: Our Tool (raw-web-search)
 
 | Query | Latency | Results | Tokens | Content type |
 |-------|---------|---------|--------|-------------|
@@ -56,7 +56,7 @@ Full workflow when WebFetch fails: user must try another URL or give up. **3+ to
 
 ## Head-to-Head Comparison
 
-| Metric | open-search-mcp | WebSearch alone | WebSearch+WebFetch |
+| Metric | raw-web-search | WebSearch alone | WebSearch+WebFetch |
 |--------|----------------|----------------|-------------------|
 | **Latency** | 6.3s | ~3s | ~6-10s (multiple calls) |
 | **Tokens/query** | **667** | ~650 | ~1,300+ |
@@ -110,5 +110,5 @@ Full workflow when WebFetch fails: user must try another URL or give up. **3+ to
 ### The deciding factor:
 **WebFetch's 50% failure rate makes WebSearch+WebFetch unreliable as a workflow.** When it works, WebFetch produces better structured output than our tool. But it fails half the time on real-world URLs (JS-rendered pages, 403s). Our tool's 76% extraction rate with snippet fallback is more reliable.
 
-### Overall: open-search-mcp is a net improvement over the baseline.
+### Overall: raw-web-search is a net improvement over the baseline.
 The combination of reliability, token efficiency, auto-approval, and single-call workflow outweighs the latency penalty. The latency gap (6.3s vs 3s) is addressable with stream-processing and Playwright.

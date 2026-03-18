@@ -40,8 +40,8 @@ packages = ["open_search_mcp"]
 package-dir = {"" = "src"}
 
 [project.urls]
-Homepage = "https://github.com/andresfortunato/open-search"
-Repository = "https://github.com/andresfortunato/open-search"
+Homepage = "https://github.com/andresfortunato/raw-web-search"
+Repository = "https://github.com/andresfortunato/raw-web-search"
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"

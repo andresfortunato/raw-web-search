@@ -5,7 +5,7 @@ Same 5 queries, same 5 ground-truth facts each. Now with 1500ch budget + Playwri
 
 ## Query 1: "rust async await best practices"
 
-| Fact | WebSearch | open-search v1 | open-search v2 |
+| Fact | WebSearch | raw-web-search v1 | raw-web-search v2 |
 |------|-----------|-----------------|-----------------|
 | 1. Futures are lazy (must be .await'd to run) | ✓ | ✓ | ✓ "doesn't do anything unless it is await" |
 | 2. Avoid blocking ops in async | ✓ | ✓ | ✓ "blocking operations can disrupt cooperative behavior" |
@@ -17,7 +17,7 @@ Same 5 queries, same 5 ground-truth facts each. Now with 1500ch budget + Playwri
 
 ## Query 2: "CRISPR gene editing mechanism explained"
 
-| Fact | WebSearch | open-search v1 | open-search v2 |
+| Fact | WebSearch | raw-web-search v1 | raw-web-search v2 |
 |------|-----------|-----------------|-----------------|
 | 1. Three steps: recognition, cleavage, repair | ✓ | ✓ snippet | ✓ MedlinePlus explains bacterial immune defense |
 | 2. Guide RNA directs Cas9 to target | ✓ | ✗ | ✓ "produce RNA segments from CRISPR arrays that recognize and attach" |
@@ -29,7 +29,7 @@ Same 5 queries, same 5 ground-truth facts each. Now with 1500ch budget + Playwri
 
 ## Query 3: "what causes lithium battery thermal runaway"
 
-| Fact | WebSearch | open-search v1 | open-search v2 |
+| Fact | WebSearch | raw-web-search v1 | raw-web-search v2 |
 |------|-----------|-----------------|-----------------|
 | 1. Self-sustaining exothermic chain reaction | ✓ | ✓ | ✓ "self-sustaining increase in temperature due to a chain reaction" |
 | 2. Causes: short circuit, overcharging, physical damage, heat | ✓ | ✓ | ✓ "mechanical damage, external heat, short circuit, or overcharging" |
@@ -41,7 +41,7 @@ Same 5 queries, same 5 ground-truth facts each. Now with 1500ch budget + Playwri
 
 ## Query 4: "PostgreSQL window functions examples"
 
-| Fact | WebSearch | open-search v1 | open-search v2 |
+| Fact | WebSearch | raw-web-search v1 | raw-web-search v2 |
 |------|-----------|-----------------|-----------------|
 | 1. Window functions compute across rows without collapsing | ✓ | ✓ | ✓ "perform calculations across a set of rows related to current row" |
 | 2. OVER clause with PARTITION BY and ORDER BY | ✓ | ✓ | ✓ references syntax |
@@ -53,7 +53,7 @@ Same 5 queries, same 5 ground-truth facts each. Now with 1500ch budget + Playwri
 
 ## Query 5: "how do solar panels convert light to electricity"
 
-| Fact | WebSearch | open-search v1 | open-search v2 |
+| Fact | WebSearch | raw-web-search v1 | raw-web-search v2 |
 |------|-----------|-----------------|-----------------|
 | 1. Photovoltaic effect converts light to current | ✓ | ✓ | ✓ "photovoltaic (PV) panels" |
 | 2. Photons absorbed by semiconductor (silicon) | ✓ | ✓ | ✓ "energy from sunlight is absorbed by the PV cells" |

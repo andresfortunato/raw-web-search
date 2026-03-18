@@ -5,7 +5,7 @@
 
 ## Query 1: "rust async await best practices"
 
-| Fact | WebSearch | open-search-mcp |
+| Fact | WebSearch | raw-web-search |
 |------|-----------|-----------------|
 | 1. Futures are lazy (must be .await'd to run) | ✓ | ✓ |
 | 2. Avoid blocking ops (thread::sleep, sync I/O) in async | ✓ mentions thread::sleep | ✓ mentions "blocking operations disrupt cooperative scheduling" |
@@ -13,11 +13,11 @@
 | 4. Use Send-safe types (no Rc/RefCell with multithreaded executor) | ✓ names Rc, RefCell, Send | ✗ |
 | 5. Use join! for concurrent futures instead of sequential awaits | ✓ mentions join! | ✗ |
 
-**Score: WebSearch 5/5, open-search-mcp 3/5**
+**Score: WebSearch 5/5, raw-web-search 3/5**
 
 ## Query 2: "CRISPR gene editing mechanism explained"
 
-| Fact | WebSearch | open-search-mcp |
+| Fact | WebSearch | raw-web-search |
 |------|-----------|-----------------|
 | 1. Three steps: recognition, cleavage, repair | ✓ detailed | ✓ snippet mentions it |
 | 2. Guide RNA directs Cas9 to target sequence | ✓ | ✗ |
@@ -25,11 +25,11 @@
 | 4. PAM site (protospacer adjacent motif) required | ✓ "3 base pair upstream to PAM" | ✗ |
 | 5. Repair via NHEJ or HDR pathways | ✓ names both | ✗ |
 
-**Score: WebSearch 5/5, open-search-mcp 1/5**
+**Score: WebSearch 5/5, raw-web-search 1/5**
 
 ## Query 3: "what causes lithium battery thermal runaway"
 
-| Fact | WebSearch | open-search-mcp |
+| Fact | WebSearch | raw-web-search |
 |------|-----------|-----------------|
 | 1. Self-sustaining exothermic chain reaction | ✓ | ✓ "uncontrollably released" |
 | 2. Causes: internal short circuit, overcharging, physical damage, external heat | ✓ lists all 4 | ✓ "mechanical damage, external heat, short circuit, overcharging" |
@@ -37,11 +37,11 @@
 | 4. Temperature thresholds (80°C SEI, 130°C separator, 150°C cathode) | ✗ | ✗ |
 | 5. Positive feedback loop (heat → reaction → more heat) | ✓ describes the cycle | ✗ |
 
-**Score: WebSearch 4/5, open-search-mcp 2/5**
+**Score: WebSearch 4/5, raw-web-search 2/5**
 
 ## Query 4: "PostgreSQL window functions examples"
 
-| Fact | WebSearch | open-search-mcp |
+| Fact | WebSearch | raw-web-search |
 |------|-----------|-----------------|
 | 1. Window functions compute across related rows without collapsing them | ✓ | ✓ |
 | 2. OVER clause with PARTITION BY and ORDER BY | ✓ shows syntax | ✓ references syntax |
@@ -49,11 +49,11 @@
 | 4. LAG/LEAD for accessing previous/next rows | ✓ describes both | ✗ |
 | 5. Concrete SQL example (SELECT ... OVER (PARTITION BY ...)) | ✓ shows empsalary example | ✗ |
 
-**Score: WebSearch 5/5, open-search-mcp 3/5**
+**Score: WebSearch 5/5, raw-web-search 3/5**
 
 ## Query 5: "how do solar panels convert light to electricity"
 
-| Fact | WebSearch | open-search-mcp |
+| Fact | WebSearch | raw-web-search |
 |------|-----------|-----------------|
 | 1. Photovoltaic effect converts light to current | ✓ | ✓ |
 | 2. Photons absorbed by semiconductor (silicon) | ✓ | ✓ mentions PV cell |
@@ -61,13 +61,13 @@
 | 4. DC output converted to AC by inverter | ✓ | ✗ |
 | 5. Electric field in p-n junction pushes electrons | ✓ "electric field pushes energized electrons" | ✗ |
 
-**Score: WebSearch 5/5, open-search-mcp 2/5**
+**Score: WebSearch 5/5, raw-web-search 2/5**
 
 ---
 
 ## Summary
 
-| Query | WebSearch | open-search-mcp |
+| Query | WebSearch | raw-web-search |
 |-------|-----------|-----------------|
 | Rust async | 5/5 | 3/5 |
 | CRISPR | 5/5 | 1/5 |
@@ -78,7 +78,7 @@
 
 ## Key Finding
 
-**WebSearch covers 2.2x more facts than open-search-mcp.** The gap is largest on science/explainer queries (CRISPR: 5 vs 1) and smallest on technical queries (Rust: 5 vs 3, PostgreSQL: 5 vs 3).
+**WebSearch covers 2.2x more facts than raw-web-search.** The gap is largest on science/explainer queries (CRISPR: 5 vs 1) and smallest on technical queries (Rust: 5 vs 3, PostgreSQL: 5 vs 3).
 
 ### Why our tool scores low
 

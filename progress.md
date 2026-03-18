@@ -18,7 +18,7 @@ Root cause: fastembed pads all texts in a batch to the longest text's token coun
 
 ### Current Latency (post all optimizations)
 
-| Metric | **open-search-mcp** | WebSearch | WebSearch+WebFetch |
+| Metric | **raw-web-search** | WebSearch | WebSearch+WebFetch |
 |--------|---|---|---|
 | Latency | **4.1s** | ~3s | ~6-10s (multi-call) |
 | Tokens/query | **535** | ~650 | ~1,300+ |

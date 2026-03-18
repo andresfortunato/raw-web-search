@@ -92,10 +92,10 @@ SearXNG runs as a Docker container alongside Redis. The MCP server auto-starts c
 
 ```bash
 # Install globally (available in all projects)
-claude mcp add -s user open-search -- uvx --from git+https://github.com/andresfortunato/open-search.git open-search-mcp
+claude mcp add -s user open-search -- uvx --from git+https://github.com/andresfortunato/raw-web-search.git open-search-mcp
 
 # Set as default search (one-time — tells Claude to prefer this over WebSearch)
-uvx --from git+https://github.com/andresfortunato/open-search.git open-search-mcp --setup
+uvx --from git+https://github.com/andresfortunato/raw-web-search.git open-search-mcp --setup
 
 # Optional: install Chromium for ~100% extraction success (vs 76% without)
 playwright install chromium

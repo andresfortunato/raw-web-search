@@ -31,7 +31,7 @@ Required before MCP Registry submission. Not required for Docker Catalog.
 
 ### Steps
 1. Check package name availability: `pip index versions open-search-mcp`
-2. Add `mcp-name: io.github.andresfortunato/open-search` to README.md (registry verification marker)
+2. Add `mcp-name: io.github.andresfortunato/raw-web-search` to README.md (registry verification marker)
 3. Build: `uv build`
 4. Create PyPI account if needed: https://pypi.org/account/register/
 5. Create API token: https://pypi.org/manage/account/token/
@@ -55,7 +55,7 @@ Blocked on PyPI publishing.
 
 ### Registry entry format
 Already created at `server.json`:
-- Namespace: `io.github.andresfortunato/open-search`
+- Namespace: `io.github.andresfortunato/raw-web-search`
 - Package: `open-search-mcp` on PyPI
 - Schema: `https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json`
 
@@ -67,7 +67,7 @@ Research needed. Not started.
 - Plugins are GitHub repos with specific structure
 - Can bundle MCP server config + CLAUDE.md instructions
 - Discoverable via `/plugin` → Discover tab in Claude Code
-- May need separate repo (`andresfortunato/open-search-plugin`)
+- May need separate repo (`andresfortunato/raw-web-search-plugin`)
 
 ### Steps
 1. Research exact plugin format (read Claude Code plugin docs)

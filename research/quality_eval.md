@@ -2,7 +2,7 @@
 
 ## Eval C: Direct Content Comparison (3 queries)
 
-Side-by-side comparison of open-search-mcp vs WebSearch output. Judged by: which output would help Claude produce a better answer?
+Side-by-side comparison of raw-web-search vs WebSearch output. Judged by: which output would help Claude produce a better answer?
 
 ### Query 1: "rust async await best practices"
 
@@ -12,13 +12,13 @@ Side-by-side comparison of open-search-mcp vs WebSearch output. Judged by: which
 - Generic — reads like a tutorial summary
 - No code examples, no specific API references
 
-**open-search-mcp output (~873 tok):**
+**raw-web-search output (~873 tok):**
 - Raw excerpts from official Rust async book and blog posts
 - Contains actual Rust concepts in context: cooperative scheduling, blocking operations, tokio specifics
 - Links to official documentation and working group roadmap
 - Less organized but more technically precise
 
-**Verdict: open-search-mcp wins for technical queries.** The verbatim excerpts from the official Rust async book contain precise technical language that Claude can quote directly. WebSearch's synthesis is correct but generic — it loses the specific guidance about tokio, cooperative scheduling, and the nuances that matter for implementation.
+**Verdict: raw-web-search wins for technical queries.** The verbatim excerpts from the official Rust async book contain precise technical language that Claude can quote directly. WebSearch's synthesis is correct but generic — it loses the specific guidance about tokio, cooperative scheduling, and the nuances that matter for implementation.
 
 ### Query 2: "CRISPR gene editing mechanism explained"
 
@@ -28,7 +28,7 @@ Side-by-side comparison of open-search-mcp vs WebSearch output. Judged by: which
 - Mentions key components (guide RNA, PAM site, double-strand breaks)
 - Well-structured, reads like a textbook summary
 
-**open-search-mcp output (~391 tok):**
+**raw-web-search output (~391 tok):**
 - First result is a partial page from Synthego (broad, less focused)
 - Second result is a PMC snippet with the 3-step mechanism (brief)
 - Third result is an Addgene snippet (one line)
@@ -44,7 +44,7 @@ Side-by-side comparison of open-search-mcp vs WebSearch output. Judged by: which
 - Includes "when to use each" guidance
 - Comprehensive but generic
 
-**open-search-mcp output (~534 tok):**
+**raw-web-search output (~534 tok):**
 - First result from getdx.com cites academic research with specific findings
 - Second result from AWS has structured comparison headers
 - Third result from Reddit has practitioner perspective
@@ -56,7 +56,7 @@ Side-by-side comparison of open-search-mcp vs WebSearch output. Judged by: which
 
 | Query Type | Winner | Why |
 |-----------|--------|-----|
-| Technical/code | **open-search-mcp** | Verbatim excerpts preserve precise technical language, code context, API specifics |
+| Technical/code | **raw-web-search** | Verbatim excerpts preserve precise technical language, code context, API specifics |
 | Broad science | **WebSearch** | AI synthesis produces more coherent overviews for introductory questions |
 | Architecture/design | **Tie** | We provide diverse perspectives; WebSearch provides organized synthesis |
 
